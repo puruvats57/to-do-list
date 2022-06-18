@@ -10,7 +10,7 @@ function Add(props){
         <>
             <h2>Add tasks</h2>
             
-            <form action="http://127.0.0.1:9999/add" method="POST">
+            <form action="http://10.102.48.146:9999/add" method="POST">
                 <div className="input-group">
                 <label for="name">to heading:</label>
                 <input type="text" name="name" />
@@ -20,6 +20,8 @@ function Add(props){
                 <input type="text" name="desc" />
                 </div>
                 <button>add</button>
+                
+
             </form>
             
             

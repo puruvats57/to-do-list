@@ -24,7 +24,7 @@ function Update() {
             const name = document.getElementById('name').value
             const desc = document.getElementById('desc').value
 
-            const result = await fetch('http://127.0.0.1:9999/update', {
+            const result = await fetch('http://10.102.48.146:9999/update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

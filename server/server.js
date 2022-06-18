@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/todolist', {
+mongoose.connect('mongodb://mongodb:27017/todolist', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, (err) => {

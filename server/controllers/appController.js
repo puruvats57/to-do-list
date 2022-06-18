@@ -3,6 +3,7 @@ const User = require("../models/User");
 
 
 
+
 exports.update = async (req, res) => {
 
   
@@ -31,17 +32,20 @@ exports.comment = async (req, res) => {
 
   console.log("hye from comment");
   console.log(req.body);
-  const { name,desc,id,com } = req.body;
+  const { id,com } = req.body;
   var _id = id;
   var comment = com;
+
   User.updateOne(
 		{ _id: _id },
     { $set: { comment: comment }  },function(err,d){
       if (err) console.warn(err);
-      console.log('item add to cart');
-			console.log(d);
+      else
+        console.log("error");
 		
-		}
+  }
+    
+    
 	 );
   return res.json({status:"ok"});
    

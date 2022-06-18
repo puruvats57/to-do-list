@@ -88,7 +88,7 @@ function Home(props)
         console.log("hye");
         e.preventDefault();
 
-        const result = await fetch('http://127.0.0.1:9999/complete', {
+        const result = await fetch('http://10.102.48.146:9999/complete', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -18,18 +18,16 @@ function Comment() {
 
         async function updat(event) {
             event.preventDefault()
-            const name = document.getElementById('name').value
-            const desc = document.getElementById('desc').value
+           
             const com= document.getElementById('com').value
 
-            const result = await fetch('http://127.0.0.1:9999/comment', {
+            const result = await fetch('http://10.102.48.146:9999/comment', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    name,
-                    desc,
+                    
                     id,
                     com
                 })

@@ -1,0 +1,27 @@
+version: '3'
+services:
+  server:
+    build:
+      context: ./server/
+    image: akkyou/server
+    command: "node server.js"
+    
+    ports:
+      - "9999:9999"
+    links:
+      - mongodb
+    
+  client:
+    build:
+      context: ./client/
+    image: akkyou/client
+    command: "npm start"
+    
+    
+    ports:
+      - "3000:3000"
+  mongodb:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
