@@ -17,8 +17,9 @@ spec:
       containers:
       - name: server
         image: akkyou/server:latest
+        imagePullPolicy: Never
         ports:
-        - containerPort: 9999
+        - containerPort: 5000
 
 ---
 
@@ -29,10 +30,11 @@ metadata:
 spec:
   selector:
     app: server
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 5000
-    targetPort: 9999
+    targetPort: 5000
     
 
   

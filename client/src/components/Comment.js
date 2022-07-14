@@ -21,7 +21,7 @@ function Comment() {
            
             const com= document.getElementById('com').value
 
-            const result = await fetch('http://10.102.48.146:9999/comment', {
+            const result = await fetch('http://127.0.0.1:5000/comment', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

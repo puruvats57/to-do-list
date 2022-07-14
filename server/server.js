@@ -22,7 +22,11 @@ const cors=require('cors');
 
 
 
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
+
+
 
 
 
@@ -39,7 +43,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 
-mongoose.connect('mongodb://mongodb:27017/todolist', {
+mongoose.connect('mongodb://mongo:27017/todolist', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, (err) => {
@@ -93,7 +97,7 @@ app.post("/delete", appController.delete);
 app.post("/complete",appController.complete);
 
   
-const PORT = process.env.PORT || 9999;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, function () {
-  console.log('Server is started on http://127.0.0.1:'+PORT);
+  console.log('Server will started at http://127.0.0.1:'+PORT);
 });

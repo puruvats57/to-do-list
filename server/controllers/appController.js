@@ -60,6 +60,7 @@ exports.comment = async (req, res) => {
 
 exports.add = async (req, res) => {
   const { name, desc } = req.body;
+  console.log("name", name, desc);
 
   let user = await User.findOne({ name });
 
@@ -80,7 +81,8 @@ exports.add = async (req, res) => {
   });
 
   await user.save();
-  res.redirect("http://127.0.0.1:3000/");
+
+  res.redirect('http:localhost:3000/')
 };
 
 

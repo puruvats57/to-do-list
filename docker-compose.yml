@@ -7,9 +7,9 @@ services:
     command: "node server.js"
     
     ports:
-      - "9999:9999"
+      - "5000:5000"
     links:
-      - mongodb
+      - mongo
     
   client:
     build:
@@ -20,7 +20,7 @@ services:
     
     ports:
       - "3000:3000"
-  mongodb:
+  mongo:
     container_name: mongo
     image: mongo
     ports:
