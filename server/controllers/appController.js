@@ -1,4 +1,3 @@
-
 const User = require("../models/User");
 
 
@@ -60,7 +59,7 @@ exports.comment = async (req, res) => {
 
 exports.add = async (req, res) => {
   const { name, desc } = req.body;
-  console.log("name", name, desc);
+  console.log("name and desc", name, desc);
 
   let user = await User.findOne({ name });
 

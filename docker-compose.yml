@@ -3,7 +3,7 @@ services:
   server:
     build:
       context: ./server/
-    image: akkyou/server
+    image: akkyou/server:latest
     command: "node server.js"
     
     ports:
@@ -14,7 +14,7 @@ services:
   client:
     build:
       context: ./client/
-    image: akkyou/client
+    image: akkyou/client:latest
     command: "npm start"
     
     
