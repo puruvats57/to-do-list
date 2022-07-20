@@ -6,8 +6,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: change
-        run: cd
-      - name: build
+       - uses: actions/checkout@v2
+       - name: build
         
-        run: docker-compose.yml build
+         run: docker-compose build
