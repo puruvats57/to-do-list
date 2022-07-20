@@ -13,6 +13,7 @@ jobs:
        
 
   build: 
+      needs: delete
 
  
       runs-on: self-hosted
