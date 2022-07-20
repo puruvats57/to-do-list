@@ -10,4 +10,4 @@ jobs:
         run: cd
       - name: build
         
-        run: docker-compose build
+        run: docker-compose.yml build
