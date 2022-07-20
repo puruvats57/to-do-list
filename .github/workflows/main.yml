@@ -43,6 +43,6 @@ jobs:
         env:
           GITLAB_HOSTNAME: "gitlab.com"
           GITLAB_USERNAME: "@prateekvats963"
-          GITLAB_PASSWORD: glpat-nAHP4NreGc7LyWNyHMsW
-          GITLAB_PROJECT_ID: 37783515 
+          GITLAB_PASSWORD: glpat-XnLpzZ81dDMnEvkPtRgo
+          GITLAB_PROJECT_ID: "37783515" 
           GITHUB_TOKEN: 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
