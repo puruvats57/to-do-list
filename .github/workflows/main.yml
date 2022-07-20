@@ -34,17 +34,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Github-Gitlab-CI
+      - name: Mirror to GitLab and run GitLab CI
   # You may pin to the exact commit or the version.
-  # uses: adityakavalur/github-gitlab-ci@0f508738f80a9aa76831ec833c0bcb4a20ebb95b
-        uses: adityakavalur/github-gitlab-ci@v0.1.1
+  # uses: SvanBoxel/gitlab-mirror-and-ci-action@13f58d2ae6e838d2b8a446f55afa5d69ad7ab0d2
+        uses: SvanBoxel/gitlab-mirror-and-ci-action@0.2
         with:
-    # Source repository on github.com
-          source_repo: https://github.com/puruvats57/to-do-list.git
-    # Target gitlab repository, needs to be complete url
-          target_repo: https://gitlab.com/automation204/todo.git
-    # Personal access token on github.com
-          source_pat: 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
-    # Personal access token for the target gitlab instance
-          target_pat: 267b83fd6e95706835831ff959107c
-
+          args: "https://gitlab.com/automation204/todo.git"
+        env:
+          GITLAB_HOSTNAME: "gitlab.com"
+          GITLAB_USERNAME: "@prateekvats963"
+          GITLAB_PASSWORD: glpat-nAHP4NreGc7LyWNyHMsW
+          GITLAB_PROJECT_ID: 37783515 
+          GITHUB_TOKEN: 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
