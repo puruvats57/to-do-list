@@ -13,6 +13,7 @@ jobs:
        
 
   build: 
+      if: ${{ always() }}
       needs: delete
 
  
