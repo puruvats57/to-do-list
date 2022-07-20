@@ -16,4 +16,4 @@ jobs:
         GITLAB_USERNAME: "Prateek vats"
         GITLAB_PASSWORD: glpat-kWsv-7jFStYv6vWh5FhW
         GITLAB_PROJECT_ID: "37783515" 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: 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
