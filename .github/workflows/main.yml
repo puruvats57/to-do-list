@@ -1,28 +1,37 @@
-name: building images
+name: deploying
 
 on: [push]
 
 jobs:
-  build:
+  delete:
     runs-on: self-hosted
     steps:
        - uses: actions/checkout@v2
+       - name: delete
+        
+         run: kubectl delete deployment my-todo-client-deployment
+       
+
+  build: 
+
+ 
+      runs-on: self-hosted
+      steps:
+        - uses: actions/checkout@v2
       
          
        
-       - name: build
+        - name: build
         
-         run: docker-compose build
+          run: docker-compose build
          
-       - name: build
+      
+        - name: build
         
-         run: kubectl delete deployment my-todo-client-deployment
-       - name: build
+          run: kubectl apply -f client-deployment.yml
+        - name: build
         
-         run: kubectl apply -f client-deployment.yml
-       - name: build
+          run: kubectl apply -f server-deployment.yml
+        - name: build
         
-         run: kubectl apply -f server-deployment.yml
-       - name: build
-        
-         run: kubectl apply -f mongo-deployment.yml
+          run: kubectl apply -f mongo-deployment.yml
