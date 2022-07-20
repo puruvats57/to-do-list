@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+      - name: change
+        run: cd ..
       - name: build
         
-        run: cd ..,docker-compose build
+        run: docker-compose build
