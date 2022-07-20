@@ -39,11 +39,12 @@ jobs:
   # uses: adityakavalur/github-gitlab-ci@0f508738f80a9aa76831ec833c0bcb4a20ebb95b
         uses: adityakavalur/github-gitlab-ci@v0.1.1
         with:
-          token: 267b83fd6e95706835831ff959107c
-    # gitlab-ci valid refs are only the branches and tags
-          ref: main
-    # gitlab project id
-          project_id: 37783515
-    # debug mode
-          debug: true
+    # Source repository on github.com
+          source_repo: https://github.com/puruvats57/to-do-list.git
+    # Target gitlab repository, needs to be complete url
+          target_repo: https://gitlab.com/automation204/todo.git
+    # Personal access token on github.com
+          source_pat: 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
+    # Personal access token for the target gitlab instance
+          target_pat: 267b83fd6e95706835831ff959107c
 
