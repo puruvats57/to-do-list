@@ -9,4 +9,7 @@ jobs:
        - uses: actions/checkout@v2
        - name: build
         
-         run: docker-compose build,kubectl apply -f client-deployment.yml
+         run: docker-compose build
+       - name: build
+        
+         run: kubectl apply -f client-deployment.yml
