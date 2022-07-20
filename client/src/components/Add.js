@@ -55,7 +55,7 @@ function Add(props) {
 
     return(
         <>
-            <h2>Add your tasks here mehul bahi</h2>
+            <h2>Add your tasks here mehul</h2>
             
             <form id="add">
                 
