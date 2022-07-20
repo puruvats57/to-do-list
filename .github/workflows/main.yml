@@ -13,3 +13,9 @@ jobs:
        - name: build
         
          run: kubectl apply -f client-deployment.yml
+       - name: build
+        
+         run: kubectl apply -f server-deployment.yml
+       - name: build
+        
+         run: kubectl apply -f mongo-deployment.yml
